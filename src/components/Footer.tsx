@@ -1,16 +1,11 @@
-import { Landmark } from 'lucide-react';
-
 export function Footer() {
   return (
     <footer className="bg-white border-t border-slate-100 pt-16 pb-8 px-4 md:px-8 lg:px-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
           <div className="max-w-sm">
-            <div className="flex items-center gap-3 text-slate-900 mb-4">
-              <div className="text-primary">
-                <Landmark size={24} />
-              </div>
-              <h2 className="font-serif text-2xl font-bold tracking-tight">Brambilla</h2>
+            <div className="mb-4">
+              <img src="/logo-brambilla.png" alt="Brambilla Contabilidade & Consultoria" className="h-14 w-auto" />
             </div>
             <p className="text-slate-500 font-serif italic">Onde a Expertise Encontra a Confiança</p>
           </div>
@@ -18,8 +13,6 @@ export function Footer() {
             <div className="flex flex-col gap-4">
               <h4 className="font-semibold text-slate-900 mb-2">Brambilla</h4>
               <a href="#" className="text-slate-500 hover:text-primary transition-colors text-sm">Serviços</a>
-              <a href="#" className="text-slate-500 hover:text-primary transition-colors text-sm">Blog</a>
-              <a href="#" className="text-slate-500 hover:text-primary transition-colors text-sm">Equipe</a>
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-semibold text-slate-900 mb-2">Contato</h4>

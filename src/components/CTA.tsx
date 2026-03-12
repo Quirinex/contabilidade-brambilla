@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export function CTA() {
   return (
@@ -13,10 +13,10 @@ export function CTA() {
             <p>Disponível de segunda a sexta, 8h às 18h.</p>
             <p>Você também pode <a href="#" className="underline hover:text-white transition-colors">agendar uma reunião</a>.</p>
           </div>
-          <button className="bg-white text-[#050526] hover:bg-slate-100 transition-colors rounded-xl px-8 py-4 font-semibold flex items-center gap-2 mt-4 shadow-lg">
-            <MessageCircle className="text-green-500" size={20} />
+          <a href="https://wa.me/554337720684" target="_blank" rel="noopener noreferrer" className="bg-white text-[#050526] hover:bg-slate-100 transition-colors rounded-xl px-8 py-4 font-semibold flex items-center gap-2 mt-4 shadow-lg">
+            <WhatsAppIcon size={20} />
             Fale pelo WhatsApp
-          </button>
+          </a>
         </div>
       </div>
     </section>

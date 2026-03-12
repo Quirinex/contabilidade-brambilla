@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { ChevronDown, MousePointer2 } from 'lucide-react';
+import { ChevronDown, Search, Target, BarChart3, Headphones } from 'lucide-react';
 
 const steps = [
-  { title: 'Diagnóstico Inicial', desc: 'Análise completa da situação contábil e fiscal da sua empresa, identificando oportunidades e riscos.' },
-  { title: 'Planejamento Estratégico', desc: 'Definição de metas claras e estruturação de um plano de ação personalizado para otimização tributária e financeira.' },
-  { title: 'Execução e Acompanhamento', desc: 'Implementação das estratégias com monitoramento contínuo de indicadores chave e resultados alcançados.' },
-  { title: 'Suporte Contínuo', desc: 'Atendimento dedicado para dúvidas rotineiras e ajustes de rota conforme o crescimento e necessidades do seu negócio.' },
+  { title: 'Diagnóstico Inicial', desc: 'Análise completa da situação contábil e fiscal da sua empresa, identificando oportunidades e riscos.', icon: Search },
+  { title: 'Planejamento Estratégico', desc: 'Definição de metas claras e estruturação de um plano de ação personalizado para otimização tributária e financeira.', icon: Target },
+  { title: 'Execução e Acompanhamento', desc: 'Implementação das estratégias com monitoramento contínuo de indicadores chave e resultados alcançados.', icon: BarChart3 },
+  { title: 'Suporte Contínuo', desc: 'Atendimento dedicado para dúvidas rotineiras e ajustes de rota conforme o crescimento e necessidades do seu negócio.', icon: Headphones },
 ];
 
 export function HowWeWork() {
@@ -24,46 +24,61 @@ export function HowWeWork() {
         </div>
 
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          {/* Mockup UI */}
-          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-white border border-slate-100">
-            <div className="h-8 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-2">
-              <div className="size-3 rounded-full bg-slate-200"></div>
-              <div className="size-3 rounded-full bg-slate-200"></div>
-              <div className="size-3 rounded-full bg-slate-200"></div>
+          {/* Process Illustration */}
+          <div className="relative w-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 p-8 md:p-10 min-h-[400px] flex flex-col justify-center">
+            <div className="relative flex flex-col gap-6">
+              {steps.map((step, i) => {
+                const Icon = step.icon;
+                const isActive = openStep === i;
+                const isPast = openStep > i;
+                return (
+                  <button
+                    key={i}
+                    onClick={() => setOpenStep(openStep === i ? -1 : i)}
+                    className={`flex items-center gap-5 p-4 rounded-xl transition-all duration-500 cursor-pointer text-left ${
+                      isActive
+                        ? 'bg-white shadow-lg scale-[1.02] border border-slate-200'
+                        : isPast
+                        ? 'bg-white/60 border border-transparent'
+                        : 'bg-transparent border border-transparent hover:bg-white/40'
+                    }`}
+                  >
+                    <div className={`relative shrink-0 size-12 rounded-xl flex items-center justify-center transition-all duration-500 ${
+                      isActive
+                        ? 'bg-gradient-to-br from-slate-900 to-slate-700 text-white shadow-md'
+                        : isPast
+                        ? 'bg-emerald-100 text-emerald-600'
+                        : 'bg-slate-200/70 text-slate-400'
+                    }`}>
+                      {isPast && !isActive ? (
+                        <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      ) : (
+                        <Icon size={20} />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className={`text-xs font-medium uppercase tracking-wider ${isActive ? 'text-primary' : 'text-slate-400'}`}>
+                          Passo {i + 1}
+                        </span>
+                      </div>
+                      <h4 className={`text-base font-medium mt-0.5 transition-colors ${isActive ? 'text-slate-900' : 'text-slate-600'}`}>
+                        {step.title}
+                      </h4>
+                    </div>
+                    <div className={`shrink-0 size-3 rounded-full transition-all duration-500 ${
+                      isActive ? 'bg-primary scale-125' : isPast ? 'bg-emerald-400' : 'bg-slate-300'
+                    }`} />
+                  </button>
+                );
+              })}
             </div>
-            <div className="p-8 relative min-h-[400px]">
-              <div className="space-y-4 max-w-[80%]">
-                <div className="h-8 w-3/4 bg-slate-100 rounded"></div>
-                <div className="h-4 w-full bg-slate-50 rounded"></div>
-                <div className="h-4 w-5/6 bg-slate-50 rounded"></div>
-                <div className="h-4 w-4/6 bg-slate-50 rounded"></div>
-              </div>
-              <div className="mt-8 space-y-6">
-                <div className="flex gap-4 items-start">
-                  <div className="size-10 rounded bg-slate-100 shrink-0"></div>
-                  <div className="space-y-2 flex-1">
-                    <div className="h-4 w-1/3 bg-slate-100 rounded"></div>
-                    <div className="h-3 w-full bg-slate-50 rounded"></div>
-                  </div>
-                </div>
-                <div className="flex gap-4 items-start">
-                  <div className="size-10 rounded bg-slate-100 shrink-0"></div>
-                  <div className="space-y-2 flex-1">
-                    <div className="h-4 w-1/4 bg-slate-100 rounded"></div>
-                    <div className="h-3 w-5/6 bg-slate-50 rounded"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute top-1/3 right-1/4 flex items-center gap-1 bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg translate-x-4">
-                <MousePointer2 size={12} /> Ana S.
-              </div>
-              <div className="absolute bottom-1/3 left-1/4 flex items-center gap-1 bg-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg -translate-x-4">
-                <MousePointer2 size={12} /> Carlos M.
-              </div>
-              <div className="absolute top-8 right-8 flex -space-x-2">
-                <img alt="Avatar Ana" className="inline-block size-8 rounded-full ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEP4qtCgvpJx4Bia5z0BBAvdAOwPjYsCGc9phnjnA4xEknL2F6Gu3FRyqHYlv5RdNiNR_mSi-1gFlxF0wXaEA3OlJcTonzfj9KiaWPTa3C0b5101QKg2brRkbN3YaDNRsmYQOIK-tWaJQW9NtJklGrutRDt_viHsL_qK8RVQK_DAfD936yvlNMuo-v0ytIZ9kQaUxiN9X2NvK9MOx-_nIGPYGmo_I4q_xfdvjN8FVPgBDnMnHrq16CqROmjlIfR8IPFK-CDYV2v-Q" />
-                <img alt="Avatar Carlos" className="inline-block size-8 rounded-full ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfZXztM_mllXx8uJALhb2bG5mFAFruZb4URb7ckgUFVzcyln2FrGtCZ8T6_uaIcQJ74oMMwZteJ5dONg73fY5R26waM0xW0C0cKELWtxW7kwuMxZwIqJnxOdToCbdznLTrzYDng3dyjI7wVDQ7QlbAAPtE1suUHO3SGbPA_X9eP7ucR1cjK4A4jsEJfT9KNzbSzKmyvwtlQBE95v5OKSuQMjci7R_7WT5SkzIJ6HMZyjhvI-ZXNXVKBeRqjK2EAvxO8KgZH1KqBNQ" />
-              </div>
+            {/* Connecting line */}
+            <div className="absolute left-[3.25rem] top-[4.5rem] bottom-[4.5rem] w-0.5 bg-slate-200 rounded-full pointer-events-none hidden md:block">
+              <div
+                className="w-full bg-gradient-to-b from-slate-900 to-primary rounded-full transition-all duration-500"
+                style={{ height: `${Math.max(0, openStep) * 33.33}%` }}
+              />
             </div>
           </div>
 

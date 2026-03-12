@@ -3,10 +3,8 @@ import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { Industries } from './components/Industries';
 import { HowWeWork } from './components/HowWeWork';
-import { Team } from './components/Team';
 import { FAQ } from './components/FAQ';
 import { Testimonials } from './components/Testimonials';
-import { Blog } from './components/Blog';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
 
@@ -17,12 +15,10 @@ export default function App() {
       <main>
         <Hero />
         <Services />
-        <Industries />
         <HowWeWork />
-        <Team />
+        <Industries />
         <FAQ />
         <Testimonials />
-        <Blog />
         <CTA />
       </main>
       <Footer />
