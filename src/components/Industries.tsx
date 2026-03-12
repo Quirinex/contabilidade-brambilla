@@ -23,7 +23,7 @@ export function Industries() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {industries.map((ind, i) => (
-            <a key={i} href="#" className="group relative flex items-center justify-between rounded-2xl bg-white p-8 md:p-10 overflow-hidden border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+            <a key={i} href="#servicos" className="group relative flex items-center justify-between rounded-2xl bg-white p-8 md:p-10 overflow-hidden border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-300">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               <div className="relative z-10 flex items-center gap-6">
                 <ind.icon className="text-primary/80" size={32} strokeWidth={1.5} />

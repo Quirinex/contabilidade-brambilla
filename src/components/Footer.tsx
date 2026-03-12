@@ -12,28 +12,14 @@ export function Footer() {
           <div className="flex gap-16 md:gap-24">
             <div className="flex flex-col gap-4">
               <h4 className="font-semibold text-slate-900 mb-2">Brambilla</h4>
-              <a href="#" className="text-slate-500 hover:text-primary transition-colors text-sm">Serviços</a>
+              <a href="#servicos" className="text-slate-500 hover:text-primary transition-colors text-sm">Serviços</a>
+              <a href="#depoimentos" className="text-slate-500 hover:text-primary transition-colors text-sm">Depoimentos</a>
+              <a href="#faq" className="text-slate-500 hover:text-primary transition-colors text-sm">Dúvidas</a>
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-semibold text-slate-900 mb-2">Contato</h4>
-              <a href="#" className="text-slate-500 hover:text-primary transition-colors text-sm">Email</a>
-              <a href="#" className="text-slate-500 hover:text-primary transition-colors text-sm">WhatsApp</a>
-              <a href="#" className="text-slate-500 hover:text-primary transition-colors text-sm">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-y border-slate-100 py-8 mb-8 relative overflow-hidden">
-          <div className="flex whitespace-nowrap opacity-50 grayscale animate-[scroll_20s_linear_infinite]">
-            <div className="flex gap-12 items-center">
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">COMPANY ONE</span>
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">GLOBAL TECH</span>
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">INNOVATE INC</span>
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">VENTURE CORP</span>
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">COMPANY ONE</span>
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">GLOBAL TECH</span>
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">INNOVATE INC</span>
-              <span className="font-sans font-bold text-xl text-slate-400 px-8">VENTURE CORP</span>
+              <a href="https://wa.me/554337720684" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-primary transition-colors text-sm">WhatsApp</a>
+              <a href="mailto:contato@brambilla.cnt.br" className="text-slate-500 hover:text-primary transition-colors text-sm">Email</a>
             </div>
           </div>
         </div>

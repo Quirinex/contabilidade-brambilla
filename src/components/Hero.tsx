@@ -2,7 +2,7 @@ import { WhatsAppIcon } from './WhatsAppIcon';
 
 export function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center pt-40 pb-20 px-4 md:px-8 relative overflow-hidden bg-white">
+    <section id="top" className="flex flex-col items-center justify-center pt-40 pb-20 px-4 md:px-8 relative overflow-hidden bg-white">
       <div className="max-w-[1000px] w-full flex flex-col items-center text-center z-10">
         <h1 className="font-serif text-5xl md:text-6xl lg:text-[96px] font-light leading-[1.1] tracking-tight text-slate-900 mb-8">
           Onde a Expertise<br />

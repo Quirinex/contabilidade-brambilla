@@ -11,7 +11,7 @@ export function CTA() {
           </h2>
           <div className="text-slate-300 text-lg md:text-xl font-light">
             <p>Disponível de segunda a sexta, 8h às 18h.</p>
-            <p>Você também pode <a href="#" className="underline hover:text-white transition-colors">agendar uma reunião</a>.</p>
+            <p>Você também pode <a href="https://wa.me/554337720684?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o." target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">agendar uma reunião</a>.</p>
           </div>
           <a href="https://wa.me/554337720684" target="_blank" rel="noopener noreferrer" className="bg-white text-[#050526] hover:bg-slate-100 transition-colors rounded-xl px-8 py-4 font-semibold flex items-center gap-2 mt-4 shadow-lg">
             <WhatsAppIcon size={20} />

@@ -13,7 +13,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-24 px-4 md:px-8 lg:px-24 bg-white">
+    <section id="faq" className="py-24 px-4 md:px-8 lg:px-24 bg-white">
       <div className="max-w-3xl mx-auto w-full">
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-center text-slate-900 mb-12 tracking-tight">
           Tem alguma <span className="gradient-text italic font-normal">dúvida?</span>

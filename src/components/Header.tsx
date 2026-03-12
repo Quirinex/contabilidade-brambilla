@@ -4,7 +4,7 @@ export function Header() {
   return (
     <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
       <header className="flex w-full max-w-[1200px] items-center justify-between rounded-xl border border-slate-200 bg-white/80 px-3 sm:px-6 py-3 backdrop-blur-md shadow-sm transition-all duration-300">
-        <a href="#" className="flex items-center shrink-0">
+        <a href="#top" className="flex items-center shrink-0">
           <img src="/logo-brambilla.png" alt="Brambilla Contabilidade & Consultoria" className="h-8 sm:h-10 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
