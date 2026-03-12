@@ -27,8 +27,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© 2026 Brambilla. Todos os direitos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-slate-900 transition-colors">Política de Privacidade</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Termos de Uso</a>
+            <a href="/politica-de-privacidade.html" className="hover:text-slate-900 transition-colors">Política de Privacidade</a>
+            <a href="/termos-de-uso.html" className="hover:text-slate-900 transition-colors">Termos de Uso</a>
           </div>
         </div>
       </div>
